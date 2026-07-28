@@ -24,7 +24,6 @@
 		"noUncheckedSideEffectImports": true,
 		"noUncheckedIndexedAccess": true,
 		"erasableSyntaxOnly": true,
-		"verbatimModuleSyntax": true,
 		"exactOptionalPropertyTypes": false
 	}
 }
