@@ -7,6 +7,7 @@
 	},
 	"scripts": {
 		"dev": "vp dev",
+		"tsc": "tsc --noEmit",
 		"generate-routes": "tsr generate",
 		"build": "vp build",
 		"preview": "vp preview"

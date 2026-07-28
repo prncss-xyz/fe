@@ -3,6 +3,9 @@ import { defineConfig } from 'vite-plus'
 import lint from './oxlint.config'
 
 export default defineConfig({
+	staged: {
+		'*': 'vp check --fix',
+	},
 	fmt: {
 		arrowParens: 'always',
 		ignorePatterns: ['.*'],
@@ -16,9 +19,7 @@ export default defineConfig({
 		useTabs: true,
 	},
 	lint,
-  run: {
-    tasks: {
-
-    }
-  }
+	run: {
+		tasks: {},
+	},
 })
