@@ -16,4 +16,9 @@ export default defineConfig({
 		useTabs: true,
 	},
 	lint,
+  run: {
+    tasks: {
+
+    }
+  }
 })
