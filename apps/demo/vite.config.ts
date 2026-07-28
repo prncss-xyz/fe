@@ -13,6 +13,9 @@ const config = defineConfig({
 		viteReact(),
 		babel({ presets: [reactCompilerPreset()] }),
 	]),
+	run: {
+		tasks: {},
+	},
 })
 
 export default config
