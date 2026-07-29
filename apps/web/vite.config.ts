@@ -9,6 +9,31 @@ import viteReact, { reactCompilerPreset } from '@vitejs/plugin-react'
 import { playwright } from '@vitest/browser-playwright'
 import { defineConfig, lazyPlugins } from 'vite-plus'
 
+export const storybookTestProject = {
+	root: fileURLToPath(new URL('.', import.meta.url)),
+	plugins: [
+		storybookTest({
+			configDir: fileURLToPath(new URL('./.storybook', import.meta.url)),
+			storybookScript: `pnpm --dir ${fileURLToPath(new URL('.', import.meta.url))} storybook --no-open`,
+		}),
+	],
+	test: {
+		name: 'storybook',
+		browser: {
+			enabled: true,
+			headless: true,
+			instances: [{ browser: 'chromium' as const }],
+			provider: playwright({
+				launchOptions: {
+					executablePath: existsSync('/usr/bin/chromium')
+						? '/usr/bin/chromium'
+						: undefined,
+				},
+			}),
+		},
+	},
+}
+
 const config = defineConfig({
 	resolve: { tsconfigPaths: true },
 	plugins: lazyPlugins(() => [
@@ -19,36 +44,11 @@ const config = defineConfig({
 	]),
 	run: {
 		tasks: {
-			vpTsc: 'tsc --noEmit',
+			'vp:tsc': 'tsc --noEmit',
 		},
 	},
 	test: {
-		projects: [
-			{
-				extends: true,
-				plugins: [
-					storybookTest({
-						configDir: fileURLToPath(new URL('./.storybook', import.meta.url)),
-						storybookScript: 'pnpm storybook --no-open',
-					}),
-				],
-				test: {
-					name: 'storybook',
-					browser: {
-						enabled: true,
-						headless: true,
-						instances: [{ browser: 'chromium' }],
-						provider: playwright({
-							launchOptions: {
-								executablePath: existsSync('/usr/bin/chromium')
-									? '/usr/bin/chromium'
-									: undefined,
-							},
-						}),
-					},
-				},
-			},
-		],
+		projects: [{ extends: true, ...storybookTestProject }],
 	},
 })
 

@@ -15,13 +15,15 @@
 		"preview": "pnpm run -r preview",
 		"tsc": "pnpm run -r tsc",
 		"knip": "knip --production --cache",
-		"test": "pnpm --filter demo test"
+		"test": "pnpm vp run vp:test",
+		"test:changed": "pnpm vp run vp:test:changed"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "catalog:",
 		"@commitlint/config-conventional": "catalog:",
 		"@commitlint/types": "catalog:",
 		"@playwright/test": "catalog:",
+		"@storybook/addon-vitest": "catalog:",
 		"@vitest/browser-playwright": "catalog:",
 		"@vitest/coverage-v8": "catalog:",
 		"knip": "catalog:",

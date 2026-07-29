@@ -321,6 +321,9 @@ importers:
       '@playwright/test':
         specifier: 'catalog:'
         version: 1.62.0
+      '@storybook/addon-vitest':
+        specifier: 'catalog:'
+        version: 10.5.5(@vitest/browser-playwright@4.1.10)(@vitest/browser@4.1.10)(@vitest/runner@4.1.10)(react@19.2.8)(storybook@10.5.5(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.8)(vite-plus@0.2.6(@types/node@26.1.1)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(@voidzero-dev/vite-plus-core@0.2.6(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.0))(esbuild@0.28.1)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.0)))(vitest@4.1.10)
       '@vitest/browser-playwright':
         specifier: 'catalog:'
         version: 4.1.10(@voidzero-dev/vite-plus-core@0.2.6(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(typescript@7.0.2)(yaml@2.9.0))(playwright@1.62.0)(vitest@4.1.10)

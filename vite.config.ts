@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite-plus'
 
+import { storybookTestProject } from './apps/web/vite.config'
 import lint from './oxlint.config'
 
 export default defineConfig({
@@ -19,7 +20,27 @@ export default defineConfig({
 		useTabs: true,
 	},
 	lint,
+	run: {
+		tasks: {
+			'vp:test': {
+				command: 'vp test',
+				input: [{ auto: true }, '!node_modules/.cache/storybook/**'],
+				output: [{ auto: true }, '!node_modules/.cache/storybook/**'],
+			},
+			'vp:test:changed': {
+				command: 'vp test --changed',
+				input: [{ auto: true }, '!node_modules/.cache/storybook/**'],
+				output: [{ auto: true }, '!node_modules/.cache/storybook/**'],
+			},
+		},
+	},
 	test: {
+		projects: [
+			{
+				extends: './apps/web/vite.config.ts',
+				...storybookTestProject,
+			},
+		],
 		coverage: {
 			provider: 'v8',
 			reporter: ['text', 'json'],

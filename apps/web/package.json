@@ -1,5 +1,5 @@
 {
-	"name": "demo",
+	"name": "web",
 	"private": true,
 	"type": "module",
 	"imports": {
@@ -7,11 +7,10 @@
 	},
 	"scripts": {
 		"dev": "vp dev",
-		"tsc": "vp run vpTsc",
+		"tsc": "vp run vp:tsc",
 		"generate-routes": "tsr generate",
 		"build": "vp build",
 		"preview": "vp preview",
-		"test": "vp test",
 		"storybook": "storybook dev",
 		"build-storybook": "storybook build"
 	},
