@@ -5,6 +5,9 @@ packages:
 catalogMode: prefer
 
 catalog:
+  '@astryxdesign/cli': ^0.1.9
+  '@astryxdesign/core': ^0.1.9
+  '@astryxdesign/theme-neutral': ^0.1.9
   '@rolldown/plugin-babel': ^0.2.3
   '@tanstack/devtools-vite': latest
   '@tanstack/react-devtools': latest
@@ -23,3 +26,7 @@ catalog:
   typescript: ^7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@^0.2.6
   vite-plus: ^0.2.6
+
+allowBuilds:
+  '@astryxdesign/cli': true
+  '@astryxdesign/core': true

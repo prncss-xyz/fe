@@ -6,13 +6,16 @@
 		"@/*": "./src/*"
 	},
 	"scripts": {
-		"dev": "vp run dev",
+		"dev": "vp dev",
 		"tsc": "vp run vpTsc",
 		"generate-routes": "tsr generate",
 		"build": "vp build",
 		"preview": "vp preview"
 	},
 	"dependencies": {
+		"@astryxdesign/cli": "catalog:",
+		"@astryxdesign/core": "catalog:",
+		"@astryxdesign/theme-neutral": "catalog:",
 		"@tanstack/react-devtools": "catalog:",
 		"@tanstack/react-router": "catalog:",
 		"@tanstack/react-router-devtools": "catalog:",
