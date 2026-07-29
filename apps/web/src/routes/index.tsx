@@ -7,6 +7,8 @@ import { Text } from '@astryxdesign/core/Text'
 import { VStack } from '@astryxdesign/core/VStack'
 import { createFileRoute } from '@tanstack/react-router'
 
+import { HelloWorld } from '../HelloWorld'
+
 export const Route = createFileRoute('/')({ component: Home })
 
 const nextSteps = [
@@ -45,6 +47,10 @@ function Home() {
 							your product.
 						</Text>
 					</VStack>
+				</Section>
+
+				<Section variant='section' padding={10} dividers={['top']}>
+					<HelloWorld />
 				</Section>
 
 				<Section variant='section' padding={10} dividers={['top']}>

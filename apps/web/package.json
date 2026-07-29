@@ -10,7 +10,9 @@
 		"tsc": "vp run vpTsc",
 		"generate-routes": "tsr generate",
 		"build": "vp build",
-		"preview": "vp preview"
+		"preview": "vp preview",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@astryxdesign/cli": "catalog:",
@@ -25,6 +27,9 @@
 	},
 	"devDependencies": {
 		"@rolldown/plugin-babel": "catalog:",
+		"@storybook/addon-a11y": "catalog:",
+		"@storybook/addon-docs": "catalog:",
+		"@storybook/react-vite": "catalog:",
 		"@tanstack/devtools-vite": "catalog:",
 		"@tanstack/router-cli": "catalog:",
 		"@types/node": "catalog:",
@@ -32,6 +37,7 @@
 		"@types/react-dom": "catalog:",
 		"@vitejs/plugin-react": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
+		"storybook": "catalog:",
 		"typescript": "catalog:",
 		"vite": "catalog:",
 		"vite-plus": "catalog:"
