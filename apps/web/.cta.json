@@ -1,10 +1,10 @@
 {
-  "projectName": "demo",
+  "projectName": "web",
   "mode": "file-router",
   "typescript": true,
   "packageManager": "pnpm",
   "includeExamples": false,
-  "tailwind": true,
+  "tailwind": false,
   "projectPreset": "default",
   "addOnOptions": {},
   "git": false,
@@ -14,7 +14,6 @@
   "version": 1,
   "framework": "react",
   "chosenAddOns": [
-    "compiler",
-    "paraglide"
+    "compiler"
   ]
 }
