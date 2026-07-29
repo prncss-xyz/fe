@@ -17,6 +17,9 @@
 		"test": "pnpm vp test"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^21.1.0",
+		"@commitlint/config-conventional": "^21.1.0",
+		"@commitlint/types": "^21.1.0",
 		"@vitest/coverage-v8": "4.1.8",
 		"knip": "catalog:",
 		"vite": "catalog:",
