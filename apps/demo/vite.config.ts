@@ -14,7 +14,9 @@ const config = defineConfig({
 		babel({ presets: [reactCompilerPreset()] }),
 	]),
 	run: {
-		tasks: {},
+		tasks: {
+			vpTsc: 'tsc --noEmit',
+		},
 	},
 })
 

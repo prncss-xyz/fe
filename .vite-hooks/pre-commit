@@ -1,4 +1,5 @@
 pnpm vp staged
-pnpm run knip
 pnpm run tsc
+pnpm run test
+pnpm run knip
 pnpm run build

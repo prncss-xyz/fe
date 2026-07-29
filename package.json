@@ -13,9 +13,11 @@
 		"build": "pnpm run -r build",
 		"preview": "pnpm run -r preview",
 		"tsc": "pnpm run -r tsc",
-		"knip": "knip --production --cache"
+		"knip": "knip --production --cache",
+		"test": "pnpm vp test"
 	},
 	"devDependencies": {
+		"@vitest/coverage-v8": "4.1.8",
 		"knip": "catalog:",
 		"vite": "catalog:",
 		"vite-plus": "catalog:"

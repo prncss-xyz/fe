@@ -19,7 +19,13 @@ export default defineConfig({
 		useTabs: true,
 	},
 	lint,
-	run: {
-		tasks: {},
+	test: {
+		coverage: {
+			provider: 'v8',
+			reporter: ['text', 'json'],
+		},
+		globals: true,
+		passWithNoTests: true,
+		pool: 'forks',
 	},
 })

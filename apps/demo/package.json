@@ -3,11 +3,11 @@
 	"private": true,
 	"type": "module",
 	"imports": {
-		"#/*": "./src/*"
+		"@/*": "./src/*"
 	},
 	"scripts": {
-		"dev": "vp dev",
-		"tsc": "tsc --noEmit",
+		"dev": "vp run dev",
+		"tsc": "vp run vpTsc",
 		"generate-routes": "tsr generate",
 		"build": "vp build",
 		"preview": "vp preview"
