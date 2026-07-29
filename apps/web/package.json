@@ -11,7 +11,8 @@
 		"generate-routes": "tsr generate",
 		"build": "vp build",
 		"preview": "vp preview",
-		"storybook": "storybook dev -p 6006",
+		"test": "vp test",
+		"storybook": "storybook dev",
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
@@ -29,6 +30,7 @@
 		"@rolldown/plugin-babel": "catalog:",
 		"@storybook/addon-a11y": "catalog:",
 		"@storybook/addon-docs": "catalog:",
+		"@storybook/addon-vitest": "catalog:",
 		"@storybook/react-vite": "catalog:",
 		"@tanstack/devtools-vite": "catalog:",
 		"@tanstack/router-cli": "catalog:",
@@ -40,6 +42,7 @@
 		"storybook": "catalog:",
 		"typescript": "catalog:",
 		"vite": "catalog:",
-		"vite-plus": "catalog:"
+		"vite-plus": "catalog:",
+		"vitest": "catalog:"
 	}
 }

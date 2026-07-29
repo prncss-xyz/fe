@@ -10,17 +10,20 @@
 	"scripts": {
 		"prepare": "git config --local --get core.hooksPath >/dev/null 2>&1 || vp config",
 		"dev": "pnpm run -r dev",
+		"storybook": "pnpm run -r storybook",
 		"build": "pnpm run -r build",
 		"preview": "pnpm run -r preview",
 		"tsc": "pnpm run -r tsc",
 		"knip": "knip --production --cache",
-		"test": "pnpm vp test"
+		"test": "pnpm --filter demo test"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^21.1.0",
-		"@commitlint/config-conventional": "^21.1.0",
-		"@commitlint/types": "^21.1.0",
-		"@vitest/coverage-v8": "4.1.8",
+		"@commitlint/cli": "catalog:",
+		"@commitlint/config-conventional": "catalog:",
+		"@commitlint/types": "catalog:",
+		"@playwright/test": "catalog:",
+		"@vitest/browser-playwright": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
 		"knip": "catalog:",
 		"vite": "catalog:",
 		"vite-plus": "catalog:"
