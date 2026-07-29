@@ -38,7 +38,12 @@ const config = defineConfig({
 	resolve: { tsconfigPaths: true },
 	plugins: lazyPlugins(() => [
 		devtools(),
-		tanstackStart(),
+		tanstackStart({
+			prerender: {
+				enabled: true,
+				crawlLinks: true,
+			},
+		}),
 		viteReact(),
 		babel({ presets: [reactCompilerPreset()] }),
 	]),
