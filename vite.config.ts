@@ -22,6 +22,14 @@ export default defineConfig({
 	lint,
 	run: {
 		tasks: {
+			verify: {
+				command: 'true',
+				dependsOn: ['tsc', 'test', 'knip', 'build'],
+			},
+			'verify:ci': {
+				command: 'true',
+				dependsOn: ['verify', 'check'],
+			},
 			'vp:test': {
 				command: 'vp test',
 				input: [{ auto: true }, '!node_modules/.cache/storybook/**'],

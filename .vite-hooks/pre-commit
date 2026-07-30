@@ -1,5 +1,2 @@
 pnpm vp staged
-pnpm run tsc
-pnpm run test
-pnpm run knip
-pnpm run build
+pnpm vp run verify

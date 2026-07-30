@@ -7,6 +7,7 @@ const lintConfig: OxlintConfig = {
 	env: {
 		builtin: true,
 	},
+	ignorePatterns: ['**/*.gen.*'],
 	plugins: ['jsx-a11y'],
 	options: {
 		denyWarnings: true,

@@ -15,8 +15,9 @@
 		"preview": "pnpm run -r preview",
 		"tsc": "pnpm run -r tsc",
 		"knip": "knip --production --cache",
-		"test": "pnpm vp run vp:test",
-		"test:changed": "pnpm vp run vp:test:changed"
+		"check": "vp check",
+		"test": "vp run vp:test",
+		"test:changed": "vp run vp:test:changed"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "catalog:",
