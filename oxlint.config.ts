@@ -1,5 +1,7 @@
 import type { OxlintConfig } from 'vite-plus/lint'
 
+export const ignorePatterns = ['.*', '**/*.gen.*']
+
 const lintConfig: OxlintConfig = {
 	categories: {
 		correctness: 'off',
@@ -7,7 +9,7 @@ const lintConfig: OxlintConfig = {
 	env: {
 		builtin: true,
 	},
-	ignorePatterns: ['**/*.gen.*'],
+	ignorePatterns,
 	plugins: ['jsx-a11y'],
 	options: {
 		denyWarnings: true,

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite-plus'
 
 import { storybookTestProject } from './apps/web/vite.config'
-import lint from './oxlint.config'
+import lint, { ignorePatterns } from './oxlint.config'
 
 export default defineConfig({
 	staged: {
@@ -9,7 +9,7 @@ export default defineConfig({
 	},
 	fmt: {
 		arrowParens: 'always',
-		ignorePatterns: ['.*'],
+		ignorePatterns,
 		jsxSingleQuote: true,
 		printWidth: 80,
 		semi: false,
