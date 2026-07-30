@@ -39,6 +39,9 @@ const config = defineConfig({
 	plugins: lazyPlugins(() => [
 		devtools(),
 		tanstackStart({
+			router: {
+				basepath: (process.env.VITE_BASE_PATH ?? '') + '/',
+			},
 			prerender: {
 				enabled: true,
 				crawlLinks: true,
