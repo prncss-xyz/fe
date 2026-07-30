@@ -13,6 +13,7 @@
 		"storybook": "pnpm run -r storybook",
 		"build": "pnpm run -r build",
 		"preview": "pnpm run -r preview",
+		"pages:enable": "gh api --method POST repos/prncss-xyz/fe/pages -f build_type=workflow",
 		"tsc": "pnpm run -r tsc",
 		"knip": "knip --production --cache",
 		"check": "vp check",

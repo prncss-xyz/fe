@@ -26,9 +26,9 @@ export default defineConfig({
 				command: 'true',
 				dependsOn: ['tsc', 'test', 'knip', 'build'],
 			},
-			'verify:ci': {
+			ci: {
 				command: 'true',
-				dependsOn: ['verify', 'check'],
+				dependsOn: ['check', 'tsc', 'test', 'knip', 'build'],
 			},
 			'vp:test': {
 				command: 'vp test',
