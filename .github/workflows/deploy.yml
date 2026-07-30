@@ -38,6 +38,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
+        with:
+          enablement: true
 
       - name: Check, build (with basePath)
         run: vpr ci
