@@ -7,6 +7,9 @@ import '../src/styles.css'
 export default definePreview({
 	addons: [addonA11y(), addonDocs()],
 	parameters: {
+		a11y: {
+			test: 'error',
+		},
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
