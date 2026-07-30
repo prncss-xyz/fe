@@ -35,14 +35,15 @@ export const storybookTestProject = {
 	},
 }
 
+const basepath = (process.env.VITE_BASE_PATH ?? '') + '/'
+
 const config = defineConfig({
+	base: basepath,
 	resolve: { tsconfigPaths: true },
 	plugins: lazyPlugins(() => [
 		devtools(),
 		tanstackStart({
-			router: {
-				basepath: (process.env.VITE_BASE_PATH ?? '') + '/',
-			},
+			router: { basepath },
 			prerender: {
 				enabled: true,
 				crawlLinks: true,
