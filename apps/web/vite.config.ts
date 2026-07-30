@@ -25,6 +25,7 @@ export const storybookTestProject = {
 			instances: [{ browser: 'chromium' as const }],
 			provider: playwright({
 				launchOptions: {
+					// on a local machine, we rely on what is installed
 					executablePath: existsSync('/usr/bin/chromium')
 						? '/usr/bin/chromium'
 						: undefined,
