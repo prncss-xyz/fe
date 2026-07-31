@@ -1,5 +1,5 @@
 {
-	"name": "web",
+	"name": "start",
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
@@ -7,11 +7,10 @@
 		"@/*": "./src/*"
 	},
 	"scripts": {
-		"dev": "waku dev",
+		"dev": "vp dev",
 		"tsc": "vp run vp:tsc",
-		"build": "waku build",
-		"start": "waku start",
-		"typegen": "waku router typegen",
+		"generate-routes": "tsr generate",
+		"build": "vp build",
 		"preview": "vp preview",
 		"storybook": "storybook dev",
 		"build-storybook": "storybook build"
@@ -20,9 +19,12 @@
 		"@astryxdesign/cli": "catalog:",
 		"@astryxdesign/core": "catalog:",
 		"@astryxdesign/theme-neutral": "catalog:",
+		"@tanstack/react-devtools": "catalog:",
+		"@tanstack/react-router": "catalog:",
+		"@tanstack/react-router-devtools": "catalog:",
+		"@tanstack/react-start": "catalog:",
 		"react": "catalog:",
-		"react-dom": "catalog:",
-		"waku": "catalog:"
+		"react-dom": "catalog:"
 	},
 	"devDependencies": {
 		"@rolldown/plugin-babel": "catalog:",
@@ -30,12 +32,13 @@
 		"@storybook/addon-docs": "catalog:",
 		"@storybook/addon-vitest": "catalog:",
 		"@storybook/react-vite": "catalog:",
+		"@tanstack/devtools-vite": "catalog:",
+		"@tanstack/router-cli": "catalog:",
 		"@types/node": "catalog:",
 		"@types/react": "catalog:",
 		"@types/react-dom": "catalog:",
 		"@vitejs/plugin-react": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
-		"react-server-dom-webpack": "catalog:",
 		"storybook": "catalog:",
 		"typescript": "catalog:",
 		"vite": "catalog:",
