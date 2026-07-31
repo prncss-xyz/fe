@@ -24,11 +24,11 @@ export default defineConfig({
 		tasks: {
 			verify: {
 				command: 'true',
-				dependsOn: ['tsc', 'test', 'knip', 'build'],
+				dependsOn: ['sherif', 'tsc', 'vp:test:changed', 'knip', 'build'],
 			},
 			ci: {
 				command: 'true',
-				dependsOn: ['check', 'tsc', 'test', 'knip', 'build'],
+				dependsOn: ['check', 'sherif', 'tsc', 'vp:test', 'knip', 'build'],
 			},
 			'vp:test': {
 				command: 'vp test',

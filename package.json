@@ -1,6 +1,7 @@
 {
-	"name": "main",
-	"version": "1.0.0",
+	"name": "root",
+	"version": "0.0.0",
+	"private": true,
 	"description": "",
 	"keywords": [],
 	"license": "MIT",
@@ -16,6 +17,7 @@
 		"pages:enable": "gh api --method POST repos/prncss-xyz/fe/pages -f build_type=workflow",
 		"tsc": "pnpm run -r tsc",
 		"knip": "knip --production --cache",
+		"sherif": "sherif",
 		"check": "vp check",
 		"test": "vp run vp:test",
 		"test:changed": "vp run vp:test:changed"
@@ -29,6 +31,7 @@
 		"@vitest/browser-playwright": "catalog:",
 		"@vitest/coverage-v8": "catalog:",
 		"knip": "catalog:",
+		"sherif": "catalog:",
 		"vite": "catalog:",
 		"vite-plus": "catalog:"
 	},

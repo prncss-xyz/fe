@@ -1,6 +1,5 @@
 packages:
   - 'apps/*'
-  - 'packages/*'
 
 catalogMode: prefer
 
@@ -36,6 +35,7 @@ catalog:
   react: ^19.2.8
   react-dom: ^19.2.8
   react-server-dom-webpack: ^19.2.8
+  sherif: ^1.13.0
   storybook: ^10.5.5
   typescript: ^7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@^0.2.6
