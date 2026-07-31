@@ -1,4 +1,5 @@
-import preview from '../.storybook/preview'
+import preview from '@/../.storybook/preview'
+
 import { HelloWorld } from './HelloWorld'
 
 const meta = preview.meta({

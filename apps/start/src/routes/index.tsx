@@ -7,7 +7,7 @@ import { Text } from '@astryxdesign/core/Text'
 import { VStack } from '@astryxdesign/core/VStack'
 import { createFileRoute } from '@tanstack/react-router'
 
-import { HelloWorld } from '../HelloWorld'
+import { HelloWorld } from '@/components/HelloWorld'
 
 export const Route = createFileRoute('/')({ component: Home })
 

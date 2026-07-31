@@ -6,7 +6,7 @@ import { Section } from '@astryxdesign/core/Section'
 import { Text } from '@astryxdesign/core/Text'
 import { VStack } from '@astryxdesign/core/VStack'
 
-import { HelloWorld } from '../HelloWorld'
+import { HelloWorld } from '@/components/HelloWorld'
 
 const nextSteps = [
 	{
